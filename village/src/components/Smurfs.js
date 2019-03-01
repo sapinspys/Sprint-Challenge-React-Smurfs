@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
-import styled from 'styled-components';
 import axios from 'axios';
+
+import styled from 'styled-components';
 
 import Smurf from './Smurf';
 

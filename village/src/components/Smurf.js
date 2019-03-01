@@ -2,14 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { Card, CardTitle, CardText, Button } from 'reactstrap';
-// import { NONAME } from 'dns';
 
 // Inline Styles
 const cardStyles = {
   width: '30%',
   minWidth: '280px',
   marginBottom: '20px', 
-  padding: '15px'
+  padding: '15px',
+  height: '300px',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-evenly',
 }
 
 const noLinkStyles = {
@@ -40,6 +43,11 @@ const Smurf = props => {
     <Button onClick={props.deleteSmurf}
         size='sm'
         color='warning'>
+            Edit Smurf
+    </Button>
+    <Button onClick={props.deleteSmurf}
+        size='sm'
+        color='danger'>
             Delete Smurf
     </Button>
   </Card>
