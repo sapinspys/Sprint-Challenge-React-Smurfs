@@ -35,7 +35,7 @@ export default class Navigation extends Component {
         <NavWrapper>
             <NavContainer>
                 <Link style={navLink} to='/'>Home</Link>
-                <Link style={navLink} to='/add'>Add Friend</Link>
+                <Link style={navLink} to='/smurf-form'>Add Smurf</Link>
                 <a style={navLink} 
                     href='https://www.linkedin.com/in/guillermo-arria-devoe/' 
                     target='_blank'
