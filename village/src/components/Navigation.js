@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import styled from 'styled-components';
 
@@ -34,8 +34,8 @@ export default class Navigation extends Component {
         return (
         <NavWrapper>
             <NavContainer>
-                <Link style={navLink} to='/'>Home</Link>
-                <Link style={navLink} to='/smurf-form'>Add Smurf</Link>
+                <NavLink style={navLink} to='/'>Home</NavLink>
+                <NavLink style={navLink} to='/smurf-form'>Add Smurf</NavLink>
                 <a style={navLink} 
                     href='https://www.linkedin.com/in/guillermo-arria-devoe/' 
                     target='_blank'
