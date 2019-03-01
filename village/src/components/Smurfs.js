@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import styled from 'styled-components';
+import axios from 'axios';
 
 import Smurf from './Smurf';
 
@@ -17,6 +18,14 @@ const WrapperContainer = styled.div`
 `;
 
 class Smurfs extends Component {
+  deleteSmurfHandler = (id) => {
+    axios
+      .delete(`http://localhost:3333/smurfs/${id}`)
+      .then(response => {
+        console.log(response);
+      })
+  }
+
   render() {
     return (
       <SmurfContainer>
@@ -29,7 +38,8 @@ class Smurfs extends Component {
                   id={smurf.id}
                   age={smurf.age}
                   height={smurf.height}
-                  key={smurf.id} />);
+                  key={smurf.id}
+                  deleteSmurf={() => this.deleteSmurfHandler(smurf.id)} />);
             })}
         </WrapperContainer>
       </SmurfContainer>

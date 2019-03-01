@@ -23,7 +23,7 @@ const Smurf = props => {
         <strong>{props.height} tall</strong>
       </CardText>
       <CardText>{props.age} smurf years old</CardText>
-      <Button onClick={() => console.log('testing')}
+      <Button onClick={props.deleteSmurf}
           size='sm'
           color='warning'>
               Delete Smurf
