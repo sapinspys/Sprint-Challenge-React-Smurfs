@@ -3,6 +3,23 @@ import { Redirect } from 'react-router-dom';
 
 import axios from 'axios';
 
+import { Button, Form, Label, Input } from 'reactstrap';
+
+// Inline Styles
+const formStyles = {
+  width: '300px',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
+  margin: '0 auto',
+  height: '350px',
+  background: 'whitesmoke',
+  padding: '20px',
+  borderRadius: '5px',
+  boxShadow: '0 0 2px black',
+  marginTop: '50px'
+}
+
 class SmurfForm extends Component {
   constructor(props) {
     super(props);
@@ -45,27 +62,30 @@ class SmurfForm extends Component {
     }
     return (
       <div className="SmurfForm">
-        <form onSubmit={this.addSmurf}>
-          <input
+        <Form onSubmit={this.addSmurf} style={formStyles}>
+          <Label style={{color:'gray', fontSize: '1.4rem'}}>
+            Add a Smurf!
+          </Label>
+          <Input
             onChange={this.handleInputChange}
             placeholder="name"
             value={this.state.name}
             name="name"
           />
-          <input
+          <Input
             onChange={this.handleInputChange}
             placeholder="age"
             value={this.state.age}
             name="age"
           />
-          <input
+          <Input
             onChange={this.handleInputChange}
             placeholder="height"
             value={this.state.height}
             name="height"
           />
-          <button type="submit">Add to the village</button>
-        </form>
+          <Button color='primary' type="submit">Add to the village</Button>
+        </Form>
       </div>
     );
   }
