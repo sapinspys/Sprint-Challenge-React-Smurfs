@@ -45,11 +45,11 @@ class App extends Component {
     return (
       <div className="App">
         <Navigation />
-        <Route path='/smurf-form' component={SmurfForm} />
         <Route exact path='/' 
           render={(props) => 
-            <Smurfs {...props} 
-              smurfs={this.state.smurfs} />} />
+            <Smurfs {...props} smurfs={this.state.smurfs} />} />
+        <Route path='/smurf-form' component={SmurfForm} />
+        <Route path='/smurf/:id' />
       </div>
     );
   }

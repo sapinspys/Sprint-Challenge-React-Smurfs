@@ -26,6 +26,10 @@ class Smurfs extends Component {
       })
   }
 
+  smurfSelectedHandler = id => {
+
+  }
+
   render() {
     const smurfs = this.props.smurfs.map(smurf => {
       return (
@@ -35,7 +39,8 @@ class Smurfs extends Component {
           age={smurf.age}
           height={smurf.height}
           key={smurf.id}
-          deleteSmurf={() => this.deleteSmurfHandler(smurf.id)} />);
+          deleteSmurf={() => this.deleteSmurfHandler(smurf.id)}
+          clicked={() => this.smurfSelectedHandler(smurf.id)} />);
     })
 
     return (
