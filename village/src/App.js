@@ -54,7 +54,8 @@ class App extends Component {
           exact path='/' 
           render={(props) => <Smurfs {...props} 
             smurfs={this.state.smurfs}
-            clicked={(id) => this.smurfSelectedHandler(id)} />} />
+            clicked={(id) => this.smurfSelectedHandler(id)}
+            sendNewData={(newData) => this.setState({smurfs: newData})} />} />
         <Route 
           path='/smurf-form' 
           render={(props) => <SmurfForm {...props}
@@ -65,7 +66,8 @@ class App extends Component {
             smurfs={this.state.smurfs.filter(smurf => {
               return smurf.id === this.state.selectedSmurfId
             })}
-            clicked={(id) => this.smurfSelectedHandler(id)} />} />
+            clicked={(id) => this.smurfSelectedHandler(id)}
+            sendNewData={(newData) => this.setState({smurfs: newData})} />} />
       </div>
     );
   }

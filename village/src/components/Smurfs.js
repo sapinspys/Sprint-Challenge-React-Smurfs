@@ -23,7 +23,7 @@ class Smurfs extends Component {
     axios
       .delete(`http://localhost:3333/smurfs/${id}`)
       .then(response => {
-        this.props.sendFormData(response.data)
+        this.props.sendNewData(response.data)
       })
   }
 
