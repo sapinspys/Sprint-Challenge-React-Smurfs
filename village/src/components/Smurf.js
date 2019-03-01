@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { Card, CardTitle, CardText, Button } from 'reactstrap';
+// import { NONAME } from 'dns';
 
 // Inline Styles
 const cardStyles = {
@@ -10,27 +12,37 @@ const cardStyles = {
   padding: '15px'
 }
 
+const noLinkStyles = {
+  textDecoration: 'none',
+}
+
 const Smurf = props => {
   return (
-    <Card inverse color='info' style={cardStyles}>
-      <CardTitle style={{
-        fontSize:'1.4rem', 
-        borderBottom: '1px solid white'
-        }}>
-            {props.name}
-      </CardTitle>
-      <CardText>
-        <strong>{props.height} tall</strong>
-      </CardText>
-      <CardText>
-        {props.age} smurf years old
-      </CardText>
-      <Button onClick={props.deleteSmurf}
-          size='sm'
-          color='warning'>
-              Delete Smurf
+  <Card inverse color='info' style={cardStyles} onClick={props.clicked}>
+    <CardTitle style={{
+      fontSize:'1.4rem', 
+      borderBottom: '1px solid white'
+      }}>
+          {props.name}
+    </CardTitle>
+    <CardText>
+      <strong>{props.height} tall</strong>
+    </CardText>
+    <CardText>
+      {props.age} smurf years old
+    </CardText>
+    <Link to={`/smurf/${props.id}`} style={noLinkStyles}>
+      <Button size='sm'
+        color='success' block>
+          More Information
       </Button>
-    </Card>
+    </Link>
+    <Button onClick={props.deleteSmurf}
+        size='sm'
+        color='warning'>
+            Delete Smurf
+    </Button>
+  </Card>
   );
 };
 

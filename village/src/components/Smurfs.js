@@ -18,17 +18,18 @@ const WrapperContainer = styled.div`
 `;
 
 class Smurfs extends Component {
+
   deleteSmurfHandler = (id) => {
     axios
       .delete(`http://localhost:3333/smurfs/${id}`)
       .then(response => {
-        console.log(response);
+        this.props.sendFormData(response.data)
       })
   }
 
-  smurfSelectedHandler = id => {
-
-  }
+  // smurfSelectedHandler = id => {
+  //   console.log(id)
+  // }
 
   render() {
     const smurfs = this.props.smurfs.map(smurf => {
@@ -40,7 +41,7 @@ class Smurfs extends Component {
           height={smurf.height}
           key={smurf.id}
           deleteSmurf={() => this.deleteSmurfHandler(smurf.id)}
-          clicked={() => this.smurfSelectedHandler(smurf.id)} />);
+          clicked={() => this.props.clicked(smurf.id)} />);
     })
 
     return (
