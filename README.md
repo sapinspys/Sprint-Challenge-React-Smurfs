@@ -67,9 +67,9 @@ Construct your Components to build a Single Page Application. Keep your componen
 
 - [X] Construct an AXIOS request to retrieve an array of all the Smurfs in the Smurf DB simply write a `GET` to the endpoint `/smurfs`.
 - [X] Display those smurfs in a list on the screen.
-- [ ] Construct an AXIOS request to `POST` to add a Smurf to the Smurf DB you'll need all three fields.
-- [ ] Create a form that will allow users to add Smurfs to the Smurf DB.
-- [ ] If a Smurf is created correctly, you should see a response that is an array of Smurfs with unique id's assigned to each Smurf.
+- [X] Construct an AXIOS request to `POST` to add a Smurf to the Smurf DB you'll need all three fields.
+- [X] Create a form that will allow users to add Smurfs to the Smurf DB.
+- [x] If a Smurf is created correctly, you should see a response that is an array of Smurfs with unique id's assigned to each Smurf.
 
 - Example:
 

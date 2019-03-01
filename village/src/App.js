@@ -26,6 +26,17 @@ class App extends Component {
       })
   }
 
+  componentDidUpdate() {
+    axios
+      .get(`http://localhost:3333/smurfs`)
+      .then(response => {
+        this.setState({smurfs: response.data})
+      })
+      .catch(error => {
+        console.error('Server Error', error)
+      })
+  }
+
   // Notice what your map function is looping over and returning inside of Smurfs.
   // You'll need to make sure you have the right properties on state and pass them down to props.
   render() {
