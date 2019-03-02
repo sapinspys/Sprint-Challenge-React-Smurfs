@@ -9,10 +9,6 @@ const cardStyles = {
   minWidth: '280px',
   marginBottom: '20px', 
   padding: '15px',
-  height: '300px',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'space-evenly',
 }
 
 const noLinkStyles = {
